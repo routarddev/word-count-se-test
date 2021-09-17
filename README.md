@@ -1,7 +1,6 @@
 # ALTAIR Senior Software developer test 
 
-Carefully read acceptance criteria and for any clarification you might need,
-feel free to mail [mgalvez@altair.com](mgalvez@altair.com) for more info.
+Carefully read acceptance criteria.
 
 As a rule of thumb, tests should cover the most part of functionality.
 
@@ -19,3 +18,14 @@ Acceptance criteria are listed below:
 	-	For testing, please use 'getFile(String fileName)' to access any custom-created test resource.
 	
 	
+__Development decisions__
+
+- A custom and simple implementation has been developed, without using frameworks like Hadoop or Spring Boot.
+However, word count is a classic problem to solve with Hadoop MapReduce method.
+- The implementation follows strictly the required task for the WordCounter class, that receives
+text from a file, performs the word count and shows the results directly.
+- A dummy interface called DataProcessor has been created in order to separate concerns and have
+    a possible factory for different input data, ways of processing, etc.
+- WordCounterTest is a dummy test class, in which some functionality is not fully tested, as
+WordCounter also shows directly the information.
+- Word process tests are performed in FileDataProcessorTest.
